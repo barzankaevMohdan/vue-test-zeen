@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <the-header></the-header>
+    <the-promo></the-promo>
+    <the-player></the-player>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/TheHeader'
+import ThePromo from './components/ThePromo'
+import ThePlayer from './components/ThePlayer'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TheHeader,
+    ThePromo,
+    ThePlayer
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    max-width: 100%;
+    width: 1140px;
+    margin: 0 auto;
+    position: relative;
+  }
 </style>

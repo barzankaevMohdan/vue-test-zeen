@@ -29,28 +29,28 @@ export default {
     },
     move (event) {
       const target = event.target
-      let offsetX = event.offsetX
-      let offsetY = event.offsetY
+      const offsetX = event.offsetX
+      const offsetY = event.offsetY
       document.onmousemove = e => {
         if (target.dataset.video === 'mini') {
-          let deltaX = e.clientX - offsetX
-          let deltaY = e.clientY - offsetY
+          const deltaX = e.clientX - offsetX
+          const deltaY = e.clientY - offsetY
           target.style.left = deltaX + 'px'
           target.style.top = deltaY + 'px'
         }
       }
       document.onmouseup = () => {
         let coords = target.getBoundingClientRect()
-        if (coords.top <= 15) {
+        if (coords.top < 15) {
           target.style.top = 15 + 'px'
         }
-        if (coords.left <= 15) {
+        if (coords.left < 15) {
           target.style.left = 15 + 'px'
         }
-        if (coords.left >= (window.innerWidth - coords.width)) {
+        if (coords.left > (window.innerWidth - coords.width)) {
           target.style.left = window.innerWidth - coords.width - 30 + 'px'
         }
-        if (coords.top >= (window.innerHeight - coords.height)) {
+        if (coords.top > (window.innerHeight - coords.height)) {
           target.style.top = window.innerHeight - coords.height - 15 + 'px'
         }
         document.onmousemove = null

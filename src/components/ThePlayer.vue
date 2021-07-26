@@ -1,6 +1,8 @@
 <template>
   <section class="player">
-    <app-video></app-video>
+    <div class="container">
+      <app-video :isActive="true" :drag="true" :indent="15"></app-video>
+    </div>
   </section>
 </template>
 

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import ZeenOverMini from '../../../../src/components/ZeenOverMini/ZeenOverMini'
+import ZeenOverMini from './components/ZeenOverMini'
 
 export default {
   components: {
@@ -29,7 +29,7 @@ export default {
     margin: 20px auto;
   }
   .some-block {
-    min-height: 1100px;
+    min-height: 1700px;
     padding: 50px 0;
   }
 </style>

@@ -1,37 +1,35 @@
 <template>
-  <div id="app">
-    <the-header></the-header>
-    <the-promo></the-promo>
-    <the-player></the-player>
+  <div class="some-block">
+    <div class="container">
+      <ZeenOverMini
+        :isActive="true"
+        :drag="true"
+        :margin="15"
+        :miniWidth="350"
+        :aspectRatio="'16:9'"
+      ></ZeenOverMini>
+    </div>
   </div>
 </template>
 
 <script>
-import TheHeader from './components/TheHeader'
-import ThePromo from './components/ThePromo'
-import ThePlayer from './components/ThePlayer'
+import ZeenOverMini from '../../../../src/components/ZeenOverMini/ZeenOverMini'
 
 export default {
-  name: 'App',
   components: {
-    TheHeader,
-    ThePromo,
-    ThePlayer
+    ZeenOverMini
   }
 }
 </script>
 
 <style lang="scss">
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-
   .container {
     max-width: 100%;
-    width: 1140px;
-    margin: 0 auto;
-    position: relative;
+    width: 850px;
+    margin: 20px auto;
+  }
+  .some-block {
+    min-height: 1100px;
+    padding: 50px 0;
   }
 </style>

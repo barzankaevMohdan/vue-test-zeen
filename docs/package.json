@@ -1,0 +1,19 @@
+{
+  "name": "vue-zeen",
+  "version": "0.0.1",
+  "description": "ds",
+  "main": "index.js",
+  "authors": {
+    "name": "ds",
+    "email": "ds"
+  },
+  "repository": "ds/vue-zeen",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}

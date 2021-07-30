@@ -133,6 +133,8 @@ export default {
 
 <style>
   :root {
+    --zeen-over-width: 850px;
+    --zeen-over-background: #1E96ED;
     --zeen-over-icon-width: 20px;
     --zeen-over-icon-height: 20px;
     --zeen-over-button-width: 20px;
@@ -143,9 +145,9 @@ export default {
 <style lang="scss" scoped>
   .zeen-over {
     display: flex;
-    width: 850px;
-    height: 470px;
-    background: #1E96ED;
+    width: var(--zeen-over-width);
+    height: calc((var(--zeen-over-width)/16)*9);
+    background: var(--zeen-over-background);
     &_mini {
       width: var(--zeen-over-mini-width); //ширина задается в props
       height: calc((var(--zeen-over-mini-width)/16)*9);
@@ -184,8 +186,8 @@ export default {
     top: -5px;
     right: -55px;
 
-    border-top: 5px solid #1E96ED;
-    border-right: 5px solid #1E96ED;
+    border-top: 5px solid var(--zeen-over-background);
+    border-right: 5px solid var(--zeen-over-background);
     transform: rotate(135deg);
     cursor: pointer;
   }

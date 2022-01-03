@@ -5,7 +5,6 @@
         :isActive="true"
         :drag="true"
         :margin="15"
-        :miniWidth="350"
         :aspectRatio="'16:9'"
       ></ZeenOverMini>
     </div>
@@ -29,7 +28,7 @@ export default {
     margin: 20px auto;
   }
   .some-block {
-    min-height: 1700px;
+    min-height: 2300px;
     padding: 50px 0;
   }
 </style>
